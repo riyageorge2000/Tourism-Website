@@ -2,7 +2,7 @@
 
 ### Kottayam Tourism Website
 
-![Project Image](a5.webp)
+![Project Image](k17.webp)
 
 ### Description
 
