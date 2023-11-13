@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kottayam Tourism</title>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #750303;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    header h1 {
+      margin: 0;
+    }
+    header nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    header nav li {
+      margin-right: 10px;
+    }
+    header nav li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    header nav li a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+    main {
+      padding: 20px;
+    }
+  
+  
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1; 
+    }
+    
+    header {
+      background-color: #750303;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2rem; 
+    }
+    
+    header nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header nav li {
+      margin-right: 10px;
+    }
+    
+    header nav li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    
+    header nav li a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    main {
+      padding: 12px;
+    }
+    
+   
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
+    
+    
+    form {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    
+    select,
+    input[type="date"] {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    
+    button[type="submit"] {
+      background-color: #750303;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+</style>
+
+</head>
+<body>
+  <header>
+    <h1>Welcome to Kottayam</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="attractions.html">Top Places</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="hotel-booking.html">Hotel Booking</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <table Width="100%" height="300">
+    <tr>
+      <td width="33.33%">
+        <img id="myImage" img src="k3.jpg" alt="image" width="100%" height="300">
+      </td>
+      <td width="33.33%">
+        <img id="mm" img src="k4.jpg" alt="image" width="100%" height="300">
+      </td>
+      <td width="33.33%">
+        <img id="km" img src="k2.jpg" alt="image" width="100%" height="300">
+      </td>
+    </tr>   
+  </table>
+
+  <script>
+    var images = ["k2.jpg", "h1.jpg", "h3.jpg", "h4.jpg"]; 
+    var i = 0;
+    setInterval(function() {
+      i = (i + 1) % images.length; 
+      document.getElementById("myImage").src = images[i]; 
+    }, 1500); 
+  </script>
+
+  <script>
+    var image = ["k3.jpg", "h2.webp", "h7.webp", "h5.jpg"]; 
+    var i = 0;
+    setInterval(function() {
+      i = (i + 1) % image.length; 
+      document.getElementById("mm").src = image[i]; 
+    }, 1500); 
+  </script>
+
+  <script>
+    var imag = ["k4.jpg", "h6.jpg", "h8.jpg", "h9.jpg"]; 
+    var i = 0;
+    setInterval(function() {
+      i = (i + 1) % imag.length; 
+      document.getElementById("km").src = imag[i];
+    }, 1500); 
+  </script>
+
+
+  <main>
+    <h2>Book Your Stay</h2><br>
+    <form>
+      <label for="hotel">Hotel:</label>
+        <select id="hotel" name="hotel" required>
+          <option value="">Choose a hotel</option>
+          <option value="h1">Hotel Aida</option>
+          <option value="h2">The Windsor Castle</option>
+          <option value="h3">Hotel Arcadia</option>
+          <option value="h4">Lake Palace Resort</option>
+          <option value="h5">Hotel Pearl Regency</option>
+          <option value="h6">Hotel Indraprastha</option>
+          <option value="h7">The Zuri Kumarakom</option>
+          <option value="h8">Abad Whispering Palms</option>
+          <option value="h9">Kumarakom Lake Resort</option>
+          <option value="h10">The Backwater Retreat</option>
+        </select>
+      <br><br>
+
+      <label for="check-in">Check-in Date:</label>
+      <input type="date" id="check-in" name="check-in">
+      <br><br>
+      <label for="check-out">Check-out Date:</label>
+      <input type="date" id="check-out" name="check-out">
+      <br><br>
+      <label for="rooms">Rooms:</label>
+      <select id="rooms" name="rooms">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br><br>
+      <label for="adults">Adults:</label>
+      <select id="adults" name="adults">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br><br>
+      <label for="children">Children:</label>
+      <select id="children" name="children">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
